@@ -1,0 +1,803 @@
+
+bin\Debug\AT90CAN_project.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000001c  00800100  0000049a  0000054e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000049a  00000000  00000000  000000b4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000009  0080011c  0080011c  0000056a  2**0
+                  ALLOC
+  3 .fuse         00000003  00820000  00820000  0000056a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .debug_aranges 00000060  00000000  00000000  0000056d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_pubnames 000000f2  00000000  00000000  000005cd  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000522  00000000  00000000  000006bf  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000002ee  00000000  00000000  00000be1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000055b  00000000  00000000  00000ecf  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000000a0  00000000  00000000  0000142c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000001dd  00000000  00000000  000014cc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000050  00000000  00000000  000016a9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000048  00000000  00000000  000016f9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 4a 00 	jmp	0x94	; 0x94 <__ctors_end>
+   4:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+   8:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+   c:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  10:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  14:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  18:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  1c:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  20:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  24:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  28:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  2c:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  30:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  34:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  38:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  3c:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  40:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  44:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  48:	0c 94 db 00 	jmp	0x1b6	; 0x1b6 <__vector_18>
+  4c:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  50:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  54:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  58:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  5c:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  60:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  64:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  68:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  6c:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  70:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  74:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  78:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  7c:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  80:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  84:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  88:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  8c:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+  90:	0c 94 69 00 	jmp	0xd2	; 0xd2 <__bad_interrupt>
+
+00000094 <__ctors_end>:
+  94:	11 24       	eor	r1, r1
+  96:	1f be       	out	0x3f, r1	; 63
+  98:	cf ef       	ldi	r28, 0xFF	; 255
+  9a:	d0 e1       	ldi	r29, 0x10	; 16
+  9c:	de bf       	out	0x3e, r29	; 62
+  9e:	cd bf       	out	0x3d, r28	; 61
+
+000000a0 <__do_copy_data>:
+  a0:	11 e0       	ldi	r17, 0x01	; 1
+  a2:	a0 e0       	ldi	r26, 0x00	; 0
+  a4:	b1 e0       	ldi	r27, 0x01	; 1
+  a6:	ea e9       	ldi	r30, 0x9A	; 154
+  a8:	f4 e0       	ldi	r31, 0x04	; 4
+  aa:	00 e0       	ldi	r16, 0x00	; 0
+  ac:	0b bf       	out	0x3b, r16	; 59
+  ae:	02 c0       	rjmp	.+4      	; 0xb4 <__do_copy_data+0x14>
+  b0:	07 90       	elpm	r0, Z+
+  b2:	0d 92       	st	X+, r0
+  b4:	ac 31       	cpi	r26, 0x1C	; 28
+  b6:	b1 07       	cpc	r27, r17
+  b8:	d9 f7       	brne	.-10     	; 0xb0 <__do_copy_data+0x10>
+
+000000ba <__do_clear_bss>:
+  ba:	11 e0       	ldi	r17, 0x01	; 1
+  bc:	ac e1       	ldi	r26, 0x1C	; 28
+  be:	b1 e0       	ldi	r27, 0x01	; 1
+  c0:	01 c0       	rjmp	.+2      	; 0xc4 <.do_clear_bss_start>
+
+000000c2 <.do_clear_bss_loop>:
+  c2:	1d 92       	st	X+, r1
+
+000000c4 <.do_clear_bss_start>:
+  c4:	a5 32       	cpi	r26, 0x25	; 37
+  c6:	b1 07       	cpc	r27, r17
+  c8:	e1 f7       	brne	.-8      	; 0xc2 <.do_clear_bss_loop>
+  ca:	0e 94 07 02 	call	0x40e	; 0x40e <main>
+  ce:	0c 94 4b 02 	jmp	0x496	; 0x496 <_exit>
+
+000000d2 <__bad_interrupt>:
+  d2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000d6 <InitCAN>:
+/****************************************************************/
+/* CAN initialization                                                */
+/****************************************************************/
+
+void InitCAN(void)
+{
+  d6:	bf 92       	push	r11
+  d8:	cf 92       	push	r12
+  da:	df 92       	push	r13
+  dc:	ef 92       	push	r14
+  de:	ff 92       	push	r15
+  e0:	0f 93       	push	r16
+  e2:	1f 93       	push	r17
+  e4:	cf 93       	push	r28
+  e6:	df 93       	push	r29
+// CAN控制器 0# ,3# 信箱中断接收 ，1#、2#、4# 信箱发送数据
+  CANGCON |= (1<<SWRES);    //CAN控制器软复位
+  e8:	68 ed       	ldi	r22, 0xD8	; 216
+  ea:	70 e0       	ldi	r23, 0x00	; 0
+  ec:	eb 01       	movw	r28, r22
+  ee:	88 81       	ld	r24, Y
+  f0:	81 60       	ori	r24, 0x01	; 1
+  f2:	88 83       	st	Y, r24
+  //CANBT1 = 0x06;            //设置波特率分频因子16MHz,16TQ,250k,=4=3+1,3
+  //CANBT2 = 0x0c;            //同步段为1“0x0n”传播段=7=6+1
+  //CANBT3 = 0x37;            //相位缓冲PH2=4=3+1，PH1=4=3+1
+  CANBT1 = 0x0E;            //设置波特率分频因子16MHz,16TQ,250k,=4=3+1,3
+  f4:	8e e0       	ldi	r24, 0x0E	; 14
+  f6:	80 93 e2 00 	sts	0x00E2, r24
+  CANBT2 = 0x04;            //同步段为1“0x0n”传播段=7=6+1
+  fa:	84 e0       	ldi	r24, 0x04	; 4
+  fc:	80 93 e3 00 	sts	0x00E3, r24
+  CANBT3 = 0x13;            //相位缓冲PH2=4=3+1，PH1=4=3+1
+ 100:	83 e1       	ldi	r24, 0x13	; 19
+ 102:	80 93 e4 00 	sts	0x00E4, r24
+  CANTCON = 0xff;
+ 106:	8f ef       	ldi	r24, 0xFF	; 255
+ 108:	80 93 e5 00 	sts	0x00E5, r24
+//--------------can_MOB INITIAL-------------------
+//MOB0=RX[CMD]    接收上位机发来的指令       格式：3,0,0,177,239,33
+  CANPAGE  = 0x00;          //MOB0,自动增量，初值为0
+ 10c:	2d ee       	ldi	r18, 0xED	; 237
+ 10e:	30 e0       	ldi	r19, 0x00	; 0
+ 110:	f9 01       	movw	r30, r18
+ 112:	10 82       	st	Z, r1
+  CANSTMOB = 0;
+ 114:	4e ee       	ldi	r20, 0xEE	; 238
+ 116:	c4 2e       	mov	r12, r20
+ 118:	d1 2c       	mov	r13, r1
+ 11a:	e6 01       	movw	r28, r12
+ 11c:	18 82       	st	Y, r1
+  CANCDMOB = 0x18;          //can2B,DLC=8
+ 11e:	af ee       	ldi	r26, 0xEF	; 239
+ 120:	b0 e0       	ldi	r27, 0x00	; 0
+ 122:	98 e1       	ldi	r25, 0x18	; 24
+ 124:	b9 2e       	mov	r11, r25
+ 126:	bc 92       	st	X, r11
+  CANIDT4 = 0x30;           // 00001 0xx
+ 128:	80 ef       	ldi	r24, 0xF0	; 240
+ 12a:	e8 2e       	mov	r14, r24
+ 12c:	f1 2c       	mov	r15, r1
+ 12e:	90 e3       	ldi	r25, 0x30	; 48
+ 130:	f7 01       	movw	r30, r14
+ 132:	90 83       	st	Z, r25
+  CANIDT3 = 0x00;           // 01111 001              33
+ 134:	01 ef       	ldi	r16, 0xF1	; 241
+ 136:	10 e0       	ldi	r17, 0x00	; 0
+ 138:	e8 01       	movw	r28, r16
+ 13a:	18 82       	st	Y, r1
+  CANIDT2 = 0x41;           // 10001 111             239
+ 13c:	42 ef       	ldi	r20, 0xF2	; 242
+ 13e:	50 e0       	ldi	r21, 0x00	; 0
+ 140:	81 e4       	ldi	r24, 0x41	; 65
+ 142:	fa 01       	movw	r30, r20
+ 144:	80 83       	st	Z, r24
+  CANIDT1 = 0x00;           // 01100 101             177
+ 146:	e3 ef       	ldi	r30, 0xF3	; 243
+ 148:	f0 e0       	ldi	r31, 0x00	; 0
+ 14a:	10 82       	st	Z, r1
+  CANIDM4  = 0x00;          // 11111 100
+ 14c:	10 92 f4 00 	sts	0x00F4, r1
+  CANIDM3  = 0x00;          // 11111 111
+ 150:	10 92 f5 00 	sts	0x00F5, r1
+  CANIDM2  = 0x00;          // 11111 111
+ 154:	10 92 f6 00 	sts	0x00F6, r1
+  CANIDM1  = 0x00;
+ 158:	10 92 f7 00 	sts	0x00F7, r1
+                                                               //CANIDM4-1数据校验屏蔽寄存器  00000 111
+  //MOB1=TX[STA1]  向上位机报告状态组1          6,0,0,178,239,33
+  CANPAGE = 0x10;
+ 15c:	80 e1       	ldi	r24, 0x10	; 16
+ 15e:	e9 01       	movw	r28, r18
+ 160:	88 83       	st	Y, r24
+  CANSTMOB = (1<<TXOK);
+ 162:	80 e4       	ldi	r24, 0x40	; 64
+ 164:	e6 01       	movw	r28, r12
+ 166:	88 83       	st	Y, r24
+  CANCDMOB = 0x18;
+ 168:	bc 92       	st	X, r11
+  CANIDT4 = 0x30;                                                               // 00001 000
+ 16a:	e7 01       	movw	r28, r14
+ 16c:	98 83       	st	Y, r25
+  CANIDT3 = 0x80;                                                               // 01111 001              33
+ 16e:	80 e8       	ldi	r24, 0x80	; 128
+ 170:	e8 01       	movw	r28, r16
+ 172:	88 83       	st	Y, r24
+  CANIDT2 = 0x00;                                                               // 10010 111             239
+ 174:	ea 01       	movw	r28, r20
+ 176:	18 82       	st	Y, r1
+  CANIDT1 = 0x20;                                                               // 11000 101             178
+ 178:	80 e2       	ldi	r24, 0x20	; 32
+ 17a:	80 83       	st	Z, r24
+
+  CANGIE |= ((1<<ENIT) + (1<<ENRX));    //开全局中断 和 接收中断
+ 17c:	eb ed       	ldi	r30, 0xDB	; 219
+ 17e:	f0 e0       	ldi	r31, 0x00	; 0
+ 180:	80 81       	ld	r24, Z
+ 182:	80 6a       	ori	r24, 0xA0	; 160
+ 184:	80 83       	st	Z, r24
+  CANIE2 |= 0x09;                       //开MOB3 & MOB0信箱接收中断(接收邮箱)
+ 186:	ee ed       	ldi	r30, 0xDE	; 222
+ 188:	f0 e0       	ldi	r31, 0x00	; 0
+ 18a:	80 81       	ld	r24, Z
+ 18c:	89 60       	ori	r24, 0x09	; 9
+ 18e:	80 83       	st	Z, r24
+  CANPAGE  = 0x00;
+ 190:	f9 01       	movw	r30, r18
+ 192:	10 82       	st	Z, r1
+  CANCDMOB |= 0x80;                     //MOB0接收使能  //MOB3接收使能
+ 194:	8c 91       	ld	r24, X
+ 196:	80 68       	ori	r24, 0x80	; 128
+ 198:	8c 93       	st	X, r24
+  CANGCON |= 0x02;                      //CAN控制器启动
+ 19a:	eb 01       	movw	r28, r22
+ 19c:	88 81       	ld	r24, Y
+ 19e:	82 60       	ori	r24, 0x02	; 2
+ 1a0:	88 83       	st	Y, r24
+}
+ 1a2:	df 91       	pop	r29
+ 1a4:	cf 91       	pop	r28
+ 1a6:	1f 91       	pop	r17
+ 1a8:	0f 91       	pop	r16
+ 1aa:	ff 90       	pop	r15
+ 1ac:	ef 90       	pop	r14
+ 1ae:	df 90       	pop	r13
+ 1b0:	cf 90       	pop	r12
+ 1b2:	bf 90       	pop	r11
+ 1b4:	08 95       	ret
+
+000001b6 <__vector_18>:
+
+/*中断函数     接收CAN数据帧 并 存入数据单元组 */
+
+SIGNAL( CANIT_vect )
+{
+ 1b6:	1f 92       	push	r1
+ 1b8:	0f 92       	push	r0
+ 1ba:	0f b6       	in	r0, 0x3f	; 63
+ 1bc:	0f 92       	push	r0
+ 1be:	0b b6       	in	r0, 0x3b	; 59
+ 1c0:	0f 92       	push	r0
+ 1c2:	11 24       	eor	r1, r1
+ 1c4:	8f 93       	push	r24
+ 1c6:	ef 93       	push	r30
+ 1c8:	ff 93       	push	r31
+    //GPIOF_PIN1_DATA = 0;
+    unsigned char num_i;
+    CANGIE &= ~(1<<ENRX);                  //关接收中断****
+ 1ca:	80 91 db 00 	lds	r24, 0x00DB
+ 1ce:	8f 7d       	andi	r24, 0xDF	; 223
+ 1d0:	80 93 db 00 	sts	0x00DB, r24
+    CANPAGE = 0x00;                        //
+ 1d4:	10 92 ed 00 	sts	0x00ED, r1
+ 1d8:	e8 e0       	ldi	r30, 0x08	; 8
+ 1da:	f1 e0       	ldi	r31, 0x01	; 1
+    for(num_i = 0; num_i < 8; num_i++)
+    {
+      can_receivedata[num_i]=CANMSG;           //取得8个字节的数据
+ 1dc:	80 91 fa 00 	lds	r24, 0x00FA
+ 1e0:	81 93       	st	Z+, r24
+{
+    //GPIOF_PIN1_DATA = 0;
+    unsigned char num_i;
+    CANGIE &= ~(1<<ENRX);                  //关接收中断****
+    CANPAGE = 0x00;                        //
+    for(num_i = 0; num_i < 8; num_i++)
+ 1e2:	81 e0       	ldi	r24, 0x01	; 1
+ 1e4:	e0 31       	cpi	r30, 0x10	; 16
+ 1e6:	f8 07       	cpc	r31, r24
+ 1e8:	c9 f7       	brne	.-14     	; 0x1dc <__vector_18+0x26>
+    {
+      can_receivedata[num_i]=CANMSG;           //取得8个字节的数据
+    }
+
+    CANPAGE = 0x00;
+ 1ea:	10 92 ed 00 	sts	0x00ED, r1
+    CANSTMOB &= ~(1<<RXOK);                //清中断标志****
+ 1ee:	80 91 ee 00 	lds	r24, 0x00EE
+ 1f2:	8f 7d       	andi	r24, 0xDF	; 223
+ 1f4:	80 93 ee 00 	sts	0x00EE, r24
+    CANCDMOB = 0x98;                       //接收使能
+ 1f8:	88 e9       	ldi	r24, 0x98	; 152
+ 1fa:	80 93 ef 00 	sts	0x00EF, r24
+                         //接收使能
+    CANGIE |= (1<<ENRX);                   //开中断
+ 1fe:	80 91 db 00 	lds	r24, 0x00DB
+ 202:	80 62       	ori	r24, 0x20	; 32
+ 204:	80 93 db 00 	sts	0x00DB, r24
+    CanReceiveEndFlag=1;
+ 208:	81 e0       	ldi	r24, 0x01	; 1
+ 20a:	80 93 1c 01 	sts	0x011C, r24
+}
+ 20e:	ff 91       	pop	r31
+ 210:	ef 91       	pop	r30
+ 212:	8f 91       	pop	r24
+ 214:	0f 90       	pop	r0
+ 216:	0b be       	out	0x3b, r0	; 59
+ 218:	0f 90       	pop	r0
+ 21a:	0f be       	out	0x3f, r0	; 63
+ 21c:	0f 90       	pop	r0
+ 21e:	1f 90       	pop	r1
+ 220:	18 95       	reti
+
+00000222 <MOB_send>:
+
+/*CAN数据帧发送 */
+
+void MOB_send(void)
+{
+  CANGIE &= ~(1<<ENRX);
+ 222:	80 91 db 00 	lds	r24, 0x00DB
+ 226:	8f 7d       	andi	r24, 0xDF	; 223
+ 228:	80 93 db 00 	sts	0x00DB, r24
+
+  unsigned int i;
+  //GPIOF_PIN1_DATA = 0;
+  CANPAGE = 0x10;                        //MOB1, auto increment, index 0
+ 22c:	80 e1       	ldi	r24, 0x10	; 16
+ 22e:	80 93 ed 00 	sts	0x00ED, r24
+  if (CANSTMOB & (1<<TXOK))
+ 232:	80 91 ee 00 	lds	r24, 0x00EE
+ 236:	86 ff       	sbrs	r24, 6
+ 238:	16 c0       	rjmp	.+44     	; 0x266 <MOB_send+0x44>
+  {
+ // CANCDMOB= 0x18;
+  CANSTMOB &= ~(1<<TXOK);
+ 23a:	80 91 ee 00 	lds	r24, 0x00EE
+ 23e:	8f 7b       	andi	r24, 0xBF	; 191
+ 240:	80 93 ee 00 	sts	0x00EE, r24
+ 244:	e0 e0       	ldi	r30, 0x00	; 0
+ 246:	f1 e0       	ldi	r31, 0x01	; 1
+
+  for(i = 0; i < 8; i++)
+  {
+   CANMSG = can_transdata[i];
+ 248:	81 91       	ld	r24, Z+
+ 24a:	80 93 fa 00 	sts	0x00FA, r24
+  if (CANSTMOB & (1<<TXOK))
+  {
+ // CANCDMOB= 0x18;
+  CANSTMOB &= ~(1<<TXOK);
+
+  for(i = 0; i < 8; i++)
+ 24e:	81 e0       	ldi	r24, 0x01	; 1
+ 250:	e8 30       	cpi	r30, 0x08	; 8
+ 252:	f8 07       	cpc	r31, r24
+ 254:	c9 f7       	brne	.-14     	; 0x248 <MOB_send+0x26>
+  {
+   CANMSG = can_transdata[i];
+  }
+  CANCDMOB = 0x58;
+ 256:	88 e5       	ldi	r24, 0x58	; 88
+ 258:	80 93 ef 00 	sts	0x00EF, r24
+
+  CANGIE |=(1<<ENRX);
+ 25c:	80 91 db 00 	lds	r24, 0x00DB
+ 260:	80 62       	ori	r24, 0x20	; 32
+ 262:	80 93 db 00 	sts	0x00DB, r24
+ 266:	08 95       	ret
+
+00000268 <can_tx>:
+}
+
+/* CAN transmission via mailbox 1 (polling)                        */
+/****************************************************************/
+void can_tx(struct MOb msg)
+{
+ 268:	ef 92       	push	r14
+ 26a:	ff 92       	push	r15
+ 26c:	0f 93       	push	r16
+ 26e:	1f 93       	push	r17
+ 270:	df 93       	push	r29
+ 272:	cf 93       	push	r28
+ 274:	cd b7       	in	r28, 0x3d	; 61
+ 276:	de b7       	in	r29, 0x3e	; 62
+ 278:	2c 97       	sbiw	r28, 0x0c	; 12
+ 27a:	0f b6       	in	r0, 0x3f	; 63
+ 27c:	f8 94       	cli
+ 27e:	de bf       	out	0x3e, r29	; 62
+ 280:	0f be       	out	0x3f, r0	; 63
+ 282:	cd bf       	out	0x3d, r28	; 61
+ 284:	e9 82       	std	Y+1, r14	; 0x01
+ 286:	fa 82       	std	Y+2, r15	; 0x02
+ 288:	0b 83       	std	Y+3, r16	; 0x03
+ 28a:	1c 83       	std	Y+4, r17	; 0x04
+ 28c:	2d 83       	std	Y+5, r18	; 0x05
+ 28e:	3e 83       	std	Y+6, r19	; 0x06
+ 290:	4f 83       	std	Y+7, r20	; 0x07
+ 292:	58 87       	std	Y+8, r21	; 0x08
+ 294:	69 87       	std	Y+9, r22	; 0x09
+ 296:	7a 87       	std	Y+10, r23	; 0x0a
+ 298:	8b 87       	std	Y+11, r24	; 0x0b
+ 29a:	9c 87       	std	Y+12, r25	; 0x0c
+	unsigned char i=0;
+
+	CANSTMOB=0;
+ 29c:	10 92 ee 00 	sts	0x00EE, r1
+	//enable MOb1, auto increment index, start with index = 0
+	CANPAGE = (1<<4);
+ 2a0:	80 e1       	ldi	r24, 0x10	; 16
+ 2a2:	80 93 ed 00 	sts	0x00ED, r24
+
+	//set IDE bit, length = 8
+	CANCDMOB = (1<<IDE) | (8<<DLC0);
+ 2a6:	88 e1       	ldi	r24, 0x18	; 24
+ 2a8:	80 93 ef 00 	sts	0x00EF, r24
+
+	//write 29 Bit identifier
+	msg.id <<= 3;
+ 2ac:	89 81       	ldd	r24, Y+1	; 0x01
+ 2ae:	9a 81       	ldd	r25, Y+2	; 0x02
+ 2b0:	ab 81       	ldd	r26, Y+3	; 0x03
+ 2b2:	bc 81       	ldd	r27, Y+4	; 0x04
+ 2b4:	e3 e0       	ldi	r30, 0x03	; 3
+ 2b6:	88 0f       	add	r24, r24
+ 2b8:	99 1f       	adc	r25, r25
+ 2ba:	aa 1f       	adc	r26, r26
+ 2bc:	bb 1f       	adc	r27, r27
+ 2be:	ea 95       	dec	r30
+ 2c0:	d1 f7       	brne	.-12     	; 0x2b6 <can_tx+0x4e>
+	CANIDT4 = (unsigned char) (msg.id&0xF8);
+ 2c2:	28 2f       	mov	r18, r24
+ 2c4:	28 7f       	andi	r18, 0xF8	; 248
+ 2c6:	20 93 f0 00 	sts	0x00F0, r18
+	CANIDT3 = (unsigned char) (msg.id>>8);
+ 2ca:	29 2f       	mov	r18, r25
+ 2cc:	3a 2f       	mov	r19, r26
+ 2ce:	4b 2f       	mov	r20, r27
+ 2d0:	55 27       	eor	r21, r21
+ 2d2:	20 93 f1 00 	sts	0x00F1, r18
+	CANIDT2 = (unsigned char) (msg.id>>16);
+ 2d6:	9d 01       	movw	r18, r26
+ 2d8:	44 27       	eor	r20, r20
+ 2da:	55 27       	eor	r21, r21
+ 2dc:	20 93 f2 00 	sts	0x00F2, r18
+	CANIDT1 = (unsigned char) (msg.id>>24);
+ 2e0:	8b 2f       	mov	r24, r27
+ 2e2:	99 27       	eor	r25, r25
+ 2e4:	aa 27       	eor	r26, r26
+ 2e6:	bb 27       	eor	r27, r27
+ 2e8:	80 93 f3 00 	sts	0x00F3, r24
+ 2ec:	fe 01       	movw	r30, r28
+ 2ee:	35 96       	adiw	r30, 0x05	; 5
+
+	//put data in mailbox
+	for (i=0; i<8; i++)
+ 2f0:	9e 01       	movw	r18, r28
+ 2f2:	23 5f       	subi	r18, 0xF3	; 243
+ 2f4:	3f 4f       	sbci	r19, 0xFF	; 255
+		CANMSG = msg.data[i];
+ 2f6:	81 91       	ld	r24, Z+
+ 2f8:	80 93 fa 00 	sts	0x00FA, r24
+	CANIDT3 = (unsigned char) (msg.id>>8);
+	CANIDT2 = (unsigned char) (msg.id>>16);
+	CANIDT1 = (unsigned char) (msg.id>>24);
+
+	//put data in mailbox
+	for (i=0; i<8; i++)
+ 2fc:	e2 17       	cp	r30, r18
+ 2fe:	f3 07       	cpc	r31, r19
+ 300:	d1 f7       	brne	.-12     	; 0x2f6 <can_tx+0x8e>
+		CANMSG = msg.data[i];
+
+	//enable transmission
+	CANCDMOB |= (1<<CONMOB0);
+ 302:	80 91 ef 00 	lds	r24, 0x00EF
+ 306:	80 64       	ori	r24, 0x40	; 64
+ 308:	80 93 ef 00 	sts	0x00EF, r24
+
+	//wait until complete
+	while (!(CANSTMOB & (1<<TXOK)));
+ 30c:	80 91 ee 00 	lds	r24, 0x00EE
+ 310:	86 ff       	sbrs	r24, 6
+ 312:	fc cf       	rjmp	.-8      	; 0x30c <can_tx+0xa4>
+
+	//reset flag
+	CANSTMOB &= ~(1<<TXOK);
+ 314:	80 91 ee 00 	lds	r24, 0x00EE
+ 318:	8f 7b       	andi	r24, 0xBF	; 191
+ 31a:	80 93 ee 00 	sts	0x00EE, r24
+}
+ 31e:	2c 96       	adiw	r28, 0x0c	; 12
+ 320:	0f b6       	in	r0, 0x3f	; 63
+ 322:	f8 94       	cli
+ 324:	de bf       	out	0x3e, r29	; 62
+ 326:	0f be       	out	0x3f, r0	; 63
+ 328:	cd bf       	out	0x3d, r28	; 61
+ 32a:	cf 91       	pop	r28
+ 32c:	df 91       	pop	r29
+ 32e:	1f 91       	pop	r17
+ 330:	0f 91       	pop	r16
+ 332:	ff 90       	pop	r15
+ 334:	ef 90       	pop	r14
+ 336:	08 95       	ret
+
+00000338 <can_rx>:
+
+/****************************************************************/
+/* CAN reception evia mailbox 0 (polling)                        */
+/****************************************************************/
+void can_rx(struct MOb msg)
+{
+ 338:	ef 92       	push	r14
+ 33a:	ff 92       	push	r15
+ 33c:	0f 93       	push	r16
+ 33e:	1f 93       	push	r17
+ 340:	df 93       	push	r29
+ 342:	cf 93       	push	r28
+ 344:	cd b7       	in	r28, 0x3d	; 61
+ 346:	de b7       	in	r29, 0x3e	; 62
+ 348:	2c 97       	sbiw	r28, 0x0c	; 12
+ 34a:	0f b6       	in	r0, 0x3f	; 63
+ 34c:	f8 94       	cli
+ 34e:	de bf       	out	0x3e, r29	; 62
+ 350:	0f be       	out	0x3f, r0	; 63
+ 352:	cd bf       	out	0x3d, r28	; 61
+ 354:	e9 82       	std	Y+1, r14	; 0x01
+ 356:	fa 82       	std	Y+2, r15	; 0x02
+ 358:	0b 83       	std	Y+3, r16	; 0x03
+ 35a:	1c 83       	std	Y+4, r17	; 0x04
+ 35c:	2d 83       	std	Y+5, r18	; 0x05
+ 35e:	3e 83       	std	Y+6, r19	; 0x06
+ 360:	4f 83       	std	Y+7, r20	; 0x07
+ 362:	58 87       	std	Y+8, r21	; 0x08
+ 364:	69 87       	std	Y+9, r22	; 0x09
+ 366:	7a 87       	std	Y+10, r23	; 0x0a
+ 368:	8b 87       	std	Y+11, r24	; 0x0b
+ 36a:	9c 87       	std	Y+12, r25	; 0x0c
+	unsigned char i;
+
+	CANHPMOB=0;
+ 36c:	10 92 ec 00 	sts	0x00EC, r1
+
+	//select MOb0
+	CANPAGE = 0x00; 	   //select MOb0
+ 370:	10 92 ed 00 	sts	0x00ED, r1
+
+	//clear MOb flags
+	CANSTMOB = 0;
+ 374:	10 92 ee 00 	sts	0x00EE, r1
+
+	msg.id=2;
+
+	//select ID which can be receive
+	CANIDT4 = (uint8_t) (msg.id << 3);
+ 378:	80 e1       	ldi	r24, 0x10	; 16
+ 37a:	80 93 f0 00 	sts	0x00F0, r24
+	CANIDT3 = (uint8_t) (msg.id >> 5);
+ 37e:	10 92 f1 00 	sts	0x00F1, r1
+	CANIDT2 = (uint8_t) (msg.id >> 13);
+ 382:	10 92 f2 00 	sts	0x00F2, r1
+	CANIDT1 = (uint8_t) (msg.id >> 21);
+ 386:	10 92 f3 00 	sts	0x00F3, r1
+
+	// set mask in order to receive only the message with the ID
+	CANIDM4 = 248;
+ 38a:	88 ef       	ldi	r24, 0xF8	; 248
+ 38c:	80 93 f4 00 	sts	0x00F4, r24
+	CANIDM3 = 255;
+ 390:	8f ef       	ldi	r24, 0xFF	; 255
+ 392:	80 93 f5 00 	sts	0x00F5, r24
+	CANIDM2 = 255;
+ 396:	80 93 f6 00 	sts	0x00F6, r24
+	CANIDM1 = 255;
+ 39a:	80 93 f7 00 	sts	0x00F7, r24
+	// enable extended ID
+	CANIDM4 |= (1<<IDEMSK);
+ 39e:	80 91 f4 00 	lds	r24, 0x00F4
+ 3a2:	81 60       	ori	r24, 0x01	; 1
+ 3a4:	80 93 f4 00 	sts	0x00F4, r24
+
+	// enable reception and
+	CANCDMOB=(1<<CONMOB1) | (1<<IDE);
+ 3a8:	80 e9       	ldi	r24, 0x90	; 144
+ 3aa:	80 93 ef 00 	sts	0x00EF, r24
+
+	// wait until reception is complete
+	while(!(CANSTMOB&(1<<RXOK)));
+ 3ae:	80 91 ee 00 	lds	r24, 0x00EE
+ 3b2:	85 ff       	sbrs	r24, 5
+ 3b4:	fc cf       	rjmp	.-8      	; 0x3ae <can_rx+0x76>
+
+	// reset flag
+	CANSTMOB &= ~(1<<RXOK);
+ 3b6:	80 91 ee 00 	lds	r24, 0x00EE
+ 3ba:	8f 7d       	andi	r24, 0xDF	; 223
+ 3bc:	80 93 ee 00 	sts	0x00EE, r24
+ 3c0:	20 e0       	ldi	r18, 0x00	; 0
+ 3c2:	06 c0       	rjmp	.+12     	; 0x3d0 <can_rx+0x98>
+
+	// get data
+	for (i=0; i<(CANCDMOB&0xf); i++)
+		//msg.data[i] = CANMSG;
+		msg_tmp[i]=CANMSG;
+ 3c4:	80 91 fa 00 	lds	r24, 0x00FA
+ 3c8:	e3 5e       	subi	r30, 0xE3	; 227
+ 3ca:	fe 4f       	sbci	r31, 0xFE	; 254
+ 3cc:	80 83       	st	Z, r24
+
+	// reset flag
+	CANSTMOB &= ~(1<<RXOK);
+
+	// get data
+	for (i=0; i<(CANCDMOB&0xf); i++)
+ 3ce:	2f 5f       	subi	r18, 0xFF	; 255
+ 3d0:	e2 2f       	mov	r30, r18
+ 3d2:	f0 e0       	ldi	r31, 0x00	; 0
+ 3d4:	80 91 ef 00 	lds	r24, 0x00EF
+ 3d8:	90 e0       	ldi	r25, 0x00	; 0
+ 3da:	8f 70       	andi	r24, 0x0F	; 15
+ 3dc:	90 70       	andi	r25, 0x00	; 0
+ 3de:	e8 17       	cp	r30, r24
+ 3e0:	f9 07       	cpc	r31, r25
+ 3e2:	84 f3       	brlt	.-32     	; 0x3c4 <can_rx+0x8c>
+		//msg.data[i] = CANMSG;
+		msg_tmp[i]=CANMSG;
+
+	//get identifier which has to be the same like ID
+	msg.id = 0;
+	msg.id |= ((unsigned long) CANIDT1<<24);
+ 3e4:	80 91 f3 00 	lds	r24, 0x00F3
+	msg.id |= ((unsigned long) CANIDT2<<16);
+ 3e8:	80 91 f2 00 	lds	r24, 0x00F2
+	msg.id |= ((unsigned long) CANIDT3<<8);
+ 3ec:	80 91 f1 00 	lds	r24, 0x00F1
+	msg.id |= (CANIDT4&0xF8);
+ 3f0:	80 91 f0 00 	lds	r24, 0x00F0
+	msg.id >>= 3;
+}
+ 3f4:	2c 96       	adiw	r28, 0x0c	; 12
+ 3f6:	0f b6       	in	r0, 0x3f	; 63
+ 3f8:	f8 94       	cli
+ 3fa:	de bf       	out	0x3e, r29	; 62
+ 3fc:	0f be       	out	0x3f, r0	; 63
+ 3fe:	cd bf       	out	0x3d, r28	; 61
+ 400:	cf 91       	pop	r28
+ 402:	df 91       	pop	r29
+ 404:	1f 91       	pop	r17
+ 406:	0f 91       	pop	r16
+ 408:	ff 90       	pop	r15
+ 40a:	ef 90       	pop	r14
+ 40c:	08 95       	ret
+
+0000040e <main>:
+#include "config.h"
+
+extern unsigned char CanReceiveEndFlag;
+
+int main(void)
+{
+ 40e:	cf 92       	push	r12
+ 410:	df 92       	push	r13
+ 412:	ef 92       	push	r14
+ 414:	ff 92       	push	r15
+ 416:	0f 93       	push	r16
+ 418:	1f 93       	push	r17
+ 41a:	df 93       	push	r29
+ 41c:	cf 93       	push	r28
+ 41e:	cd b7       	in	r28, 0x3d	; 61
+ 420:	de b7       	in	r29, 0x3e	; 62
+ 422:	2c 97       	sbiw	r28, 0x0c	; 12
+ 424:	0f b6       	in	r0, 0x3f	; 63
+ 426:	f8 94       	cli
+ 428:	de bf       	out	0x3e, r29	; 62
+ 42a:	0f be       	out	0x3f, r0	; 63
+ 42c:	cd bf       	out	0x3d, r28	; 61
+    struct MOb msg={0x18B20013,{1,3,7,6,0,7,0,0}};
+ 42e:	de 01       	movw	r26, r28
+ 430:	11 96       	adiw	r26, 0x01	; 1
+ 432:	e0 e1       	ldi	r30, 0x10	; 16
+ 434:	f1 e0       	ldi	r31, 0x01	; 1
+ 436:	8c e0       	ldi	r24, 0x0C	; 12
+ 438:	01 90       	ld	r0, Z+
+ 43a:	0d 92       	st	X+, r0
+ 43c:	81 50       	subi	r24, 0x01	; 1
+ 43e:	e1 f7       	brne	.-8      	; 0x438 <main+0x2a>
+    // Insert code
+    GPIOD_init();
+ 440:	0e 94 46 02 	call	0x48c	; 0x48c <GPIOD_init>
+    InitCAN();
+ 444:	0e 94 6b 00 	call	0xd6	; 0xd6 <InitCAN>
+    //PORTD = 0xff;
+    //DDRD  = 0xa9;
+    GPIOF_PIN1_OUTPUT;
+ 448:	81 9a       	sbi	0x10, 1	; 16
+    GPIOF_PIN1_DATA = 1;
+ 44a:	89 9a       	sbi	0x11, 1	; 17
+    // MOB_send();
+    sei();
+ 44c:	78 94       	sei
+    CANGIE |= 1<<ENRX;
+ 44e:	80 91 db 00 	lds	r24, 0x00DB
+ 452:	80 62       	ori	r24, 0x20	; 32
+ 454:	80 93 db 00 	sts	0x00DB, r24
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+ 458:	80 e9       	ldi	r24, 0x90	; 144
+ 45a:	c8 2e       	mov	r12, r24
+ 45c:	81 e0       	ldi	r24, 0x01	; 1
+ 45e:	d8 2e       	mov	r13, r24
+        //     _delay_ms(1);
+        //     GPIOF_PIN1_DATA = 0;
+        //     MOB_send();
+        //     CanReceiveEndFlag=0;
+		//  }
+		can_tx(msg);
+ 460:	e9 80       	ldd	r14, Y+1	; 0x01
+ 462:	fa 80       	ldd	r15, Y+2	; 0x02
+ 464:	0b 81       	ldd	r16, Y+3	; 0x03
+ 466:	1c 81       	ldd	r17, Y+4	; 0x04
+ 468:	2d 81       	ldd	r18, Y+5	; 0x05
+ 46a:	3e 81       	ldd	r19, Y+6	; 0x06
+ 46c:	4f 81       	ldd	r20, Y+7	; 0x07
+ 46e:	58 85       	ldd	r21, Y+8	; 0x08
+ 470:	69 85       	ldd	r22, Y+9	; 0x09
+ 472:	7a 85       	ldd	r23, Y+10	; 0x0a
+ 474:	8b 85       	ldd	r24, Y+11	; 0x0b
+ 476:	9c 85       	ldd	r25, Y+12	; 0x0c
+ 478:	0e 94 34 01 	call	0x268	; 0x268 <can_tx>
+ 47c:	80 e1       	ldi	r24, 0x10	; 16
+ 47e:	97 e2       	ldi	r25, 0x27	; 39
+ 480:	f6 01       	movw	r30, r12
+ 482:	31 97       	sbiw	r30, 0x01	; 1
+ 484:	f1 f7       	brne	.-4      	; 0x482 <main+0x74>
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 486:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 488:	d9 f7       	brne	.-10     	; 0x480 <main+0x72>
+ 48a:	ea cf       	rjmp	.-44     	; 0x460 <main+0x52>
+
+0000048c <GPIOD_init>:
+
+#include "config.h"
+
+void GPIOD_init(void)
+{
+    GPIOD_PIN5_OUTPUT;
+ 48c:	55 9a       	sbi	0x0a, 5	; 10
+    GPIOD_PIN6_INPUT;
+ 48e:	56 98       	cbi	0x0a, 6	; 10
+
+    GPIOD_PIN5_PULL_UP;
+ 490:	5d 9a       	sbi	0x0b, 5	; 11
+    GPIOD_PIN6_PULL_UP;
+ 492:	5e 9a       	sbi	0x0b, 6	; 11
+}
+ 494:	08 95       	ret
+
+00000496 <_exit>:
+ 496:	f8 94       	cli
+
+00000498 <__stop_program>:
+ 498:	ff cf       	rjmp	.-2      	; 0x498 <__stop_program>

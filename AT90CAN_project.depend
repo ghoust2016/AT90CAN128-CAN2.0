@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1465714394 source:c:\users\administrator\desktop\at90can128\at90can_project\fuse.c
+	<avr/io.h>
+
+1465783997 source:c:\users\administrator\desktop\at90can128\at90can_project\portinit.c
+	"config.h"
+
+1465721146 c:\users\administrator\desktop\at90can128\at90can_project\config.h
+	<avr/io.h>
+	<avr/iocan128.h>
+	<avr/interrupt.h>
+	<string.h>
+	<util/delay.h>
+	"portinit.h"
+	"util_bitfield.h"
+	"define.h"
+	"CAN.h"
+
+1465777462 c:\users\administrator\desktop\at90can128\at90can_project\portinit.h
+	"config.h"
+
+1443503088 c:\users\administrator\desktop\at90can128\at90can_project\util_bitfield.h
+
+1465783914 source:c:\users\administrator\desktop\at90can128\at90can_project\main.c
+	"config.h"
+
+1465719292 c:\users\administrator\desktop\at90can128\at90can_project\define.h
+	"config.h"
+
+1465783562 c:\users\administrator\desktop\at90can128\at90can_project\can.h
+	"config.h"
+
+1465784875 source:c:\users\administrator\desktop\at90can128\at90can_project\can.c
+	"config.h"
+
