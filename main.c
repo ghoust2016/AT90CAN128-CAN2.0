@@ -31,6 +31,7 @@ int main(void)
 		//  }
 		can_tx(msg);
 		_delay_ms(2000);
+		_delay_ms(1000);
       	/*GPIOD_PIN5_DATA = 0;
 		_delay_ms(1000);
 		GPIOD_PIN6_DATA = 0;
